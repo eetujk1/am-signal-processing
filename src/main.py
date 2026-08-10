@@ -20,30 +20,21 @@ am_signal = (1+modulation_index*message)*carrier
 plt.figure(figsize=(10, 8))
 
 
-# plot the message-wave
+#Plot the message-wave
 plt.subplot(3, 1, 1)
 plt.plot(t, message)
 plt.xlabel("Time (s)")
 plt.ylabel("Amplitude")
 plt.title("Message")
 
-#plot carrier-wave
-
+#Plot carrier-wave
 plt.subplot(3, 1, 2)
 plt.plot(t, carrier)
 plt.xlabel("Time (s)")
 plt.ylabel("Amplitude")
 plt.title("Carrier")
 
-
-plt.subplot(3, 1, 3)
-plt.plot(t, am_signal)
-plt.xlabel("Time (s)")
-plt.ylabel("Amplitude")
-plt.title("AM-signal")
-
-
-
+#Plot modulated signal
 plt.subplot(3, 1, 3)
 plt.plot(t, am_signal)
 plt.xlabel("Time (s)")
