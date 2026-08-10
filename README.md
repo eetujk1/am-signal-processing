@@ -16,8 +16,7 @@ The project will cover:
 - Signal filtering
 - Comparison of the original and recovered signals
 
-# Technologies 
-
+## Technologies 
 - Python
 - NumPy
 - Matplotlib
@@ -29,8 +28,24 @@ The project will cover:
 <img src = "results/am_signals.png"
 width="600" height ="500">
 
-# Project Status
+## Project Status
 
- In development
+- [x] Generate message signal
+
+- [x] Generate carrier signal
+
+- [x] Implement AM modulation
+
+- [x] Plot signals
+
+- [ ] FFT analysis
+
+- [ ] Add noise
+
+- [ ] AM demodulation
+
+- [ ] Signal filtering
+
+- [ ] Compare original and recovered signals
 
 
