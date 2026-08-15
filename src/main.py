@@ -58,3 +58,33 @@ plt.title("AM Signal spectrum")
 plt.grid()
 plt.savefig("results/am_signals_fft.png")
 plt.show()
+
+
+snr_db = 10
+
+signal_power = np.mean(am_signal**2)
+noise_power = signal_power / (10**(snr_db/10))
+
+noise_std = np.sqrt(noise_power)
+
+noise = np.random.normal(
+    0,
+    noise_std,
+    len(am_signal)
+)
+
+noisy_signal = am_signal + noise
+
+plt.figure(figsize=(10, 5))
+
+plt.plot(t, noisy_signal, alpha=0.5, label="AM signal + noise")
+plt.plot(t, am_signal, linewidth=2.5, label="AM signal")
+
+plt.xlim(0, 0.001)
+plt.xlabel("Time (s)")
+plt.ylabel("Amplitude")
+plt.title("AM Signal with Noise")
+plt.legend()
+plt.grid()
+plt.savefig("results/am_signals_noise.png")
+plt.show()
