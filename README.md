@@ -28,6 +28,13 @@ The project will cover:
 <img src = "results/am_signals.png"
 width="600" height ="500">
 
+
+
+
+### FFT Analysis
+<img src="results/am_signals_fft.png"
+  width="600" height ="500">
+
 ## Project Status
 
 - [x] Generate message signal
@@ -38,7 +45,7 @@ width="600" height ="500">
 
 - [x] Plot signals
 
-- [ ] FFT analysis
+- [x] FFT analysis
 
 - [ ] Add noise
 
