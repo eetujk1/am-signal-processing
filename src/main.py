@@ -34,7 +34,9 @@ plt.xlabel("Time (s)")
 plt.ylabel("Amplitude")
 plt.title("Carrier")
 
-#Plot modulated signal
+
+
+
 plt.subplot(3, 1, 3)
 plt.plot(t, am_signal)
 plt.xlabel("Time (s)")
@@ -42,4 +44,17 @@ plt.ylabel("Amplitude")
 plt.title("AM-signal")
 plt.grid()
 plt.savefig("results/am_signals.png")
+plt.show()
+
+frequencies = np.fft.fftfreq(len(am_signal), 1/sampling_rate)
+fft = np.fft.fft(am_signal)
+magnitude = np.abs(fft)/len(am_signal)
+
+plt.xlim(0, 20000)
+plt.plot(frequencies, magnitude)
+plt.xlabel("Frequency (Hz)")
+plt.ylabel("Magnitude")
+plt.title("AM Signal spectrum")
+plt.grid()
+plt.savefig("results/am_signals_fft.png")
 plt.show()
