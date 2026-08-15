@@ -29,11 +29,14 @@ The project will cover:
 width="600" height ="500">
 
 
-
-
 ### FFT Analysis
 <img src="results/am_signals_fft.png"
   width="600" height ="500">
+
+### Noise addition
+
+<img src = "results/am_signals_noise.png"
+width = "600" height = "500">
 
 ## Project Status
 
@@ -47,7 +50,7 @@ width="600" height ="500">
 
 - [x] FFT analysis
 
-- [ ] Add noise
+- [x] Add noise
 
 - [ ] AM demodulation
 
