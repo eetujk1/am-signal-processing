@@ -35,8 +35,6 @@ plt.ylabel("Amplitude")
 plt.title("Carrier")
 
 
-
-
 plt.subplot(3, 1, 3)
 plt.plot(t, am_signal)
 plt.xlabel("Time (s)")
