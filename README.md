@@ -22,26 +22,43 @@ The project will cover:
 - Matplotlib
 - SciPy
 
+## Simulation Parameters
+
+| Parameter | Symbol | Value | Unit |
+| :--- | :--- | :--- | :--- |
+| **Message Frequency** | $f_m$ | 1,000 | Hz |
+| **Carrier Frequency** | $f_c$ | 10,000 | Hz |
+| **Sampling Rate** | $f_s$ | 1,000,000 | Hz |
+| **Modulation Index** | $m$ | 0.5 | — |
+| **Signal-to-Noise Ratio** | SNR | 10 | dB |
+
 ## Results
 
 ### AM Modulation
 <img src = "results/am_signals.png"
 width="600" height ="500">
 
+Representation of the message wave, carrier wave, and modulated AM signal in the time domain.
 
 ### FFT Analysis
 <img src="results/am_signals_fft.png"
-  width="600" height ="500">
+height ="500">
 
-### Noise addition
+FFT analysis shows the carrier at 10 kHz and the upper and lower sidebands at 9 kHz and 11 kHz.
+
+### Noise Addition
 
 <img src = "results/am_signals_noise.png"
-width = "600" height = "500">
+height = "500">
 
-### Noisy signal FFT analysis
+AM signal combined with Gaussian white noise at 10 dB SNR.
+
+### Noisy Signal FFT Analysis
 
 <img src = "results/am_signals_noise_fft.png"
-width = "600" height = "500">
+ height = "500">
+
+The frequency spectrum of the AM signal with added noise
 
 ## Project Status
 
