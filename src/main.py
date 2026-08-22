@@ -17,6 +17,7 @@ carrier = np.sin(2*np.pi*carrier_frequency*t)
 
 am_signal = (1+modulation_index*message)*carrier
 
+
 plt.figure(figsize=(10, 8))
 
 
@@ -44,9 +45,13 @@ plt.grid()
 plt.savefig("results/am_signals.png")
 plt.show()
 
+
+
 frequencies = np.fft.fftfreq(len(am_signal), 1/sampling_rate)
 fft = np.fft.fft(am_signal)
-magnitude = np.abs(fft)/len(am_signal)
+magnitude = 2*(np.abs(fft)/len(am_signal))
+
+
 
 plt.xlim(0, 20000)
 plt.plot(frequencies, magnitude)
@@ -56,6 +61,8 @@ plt.title("AM Signal spectrum")
 plt.grid()
 plt.savefig("results/am_signals_fft.png")
 plt.show()
+
+
 
 
 snr_db = 10
@@ -85,4 +92,21 @@ plt.title("AM Signal with Noise")
 plt.legend()
 plt.grid()
 plt.savefig("results/am_signals_noise.png")
+plt.show()
+
+
+
+fft_noise = np.fft.fft(noisy_signal)
+magnitude = 2*(np.abs(fft_noise)/len(noisy_signal))
+
+plt.plot(frequencies, magnitude)
+
+
+plt.xlim(0, 20000)
+plt.xlabel("Frequency (Hz)")
+plt.ylabel("Magnitude")
+plt.title("Noisy AM Signal Spectrum")
+plt.grid()
+
+plt.savefig("results/am_signals_noise_fft.png")
 plt.show()
