@@ -38,6 +38,11 @@ width="600" height ="500">
 <img src = "results/am_signals_noise.png"
 width = "600" height = "500">
 
+### Noisy signal FFT analysis
+
+<img src = "results/am_signals_noise_fft.png"
+width = "600" height = "500">
+
 ## Project Status
 
 - [x] Generate message signal

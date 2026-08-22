@@ -26,22 +26,23 @@ plt.subplot(3, 1, 1)
 plt.plot(t, message)
 plt.xlabel("Time (s)")
 plt.ylabel("Amplitude")
-plt.title("Message")
+plt.title("Message", fontweight='bold')
 
 #Plot carrier-wave
 plt.subplot(3, 1, 2)
 plt.plot(t, carrier)
 plt.xlabel("Time (s)")
 plt.ylabel("Amplitude")
-plt.title("Carrier")
+plt.title("Carrier", fontweight='bold')
 
 
 plt.subplot(3, 1, 3)
 plt.plot(t, am_signal)
 plt.xlabel("Time (s)")
 plt.ylabel("Amplitude")
-plt.title("AM-signal")
+plt.title("AM-signal", fontweight='bold')
 plt.grid()
+plt.tight_layout(rect=[0, 0, 1, 0.96])
 plt.savefig("results/am_signals.png")
 plt.show()
 
